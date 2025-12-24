@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Loading = () => {
+const ChatBox = () => {
   return (
     <div>
-        loading
+      ChatBox
     </div>
   )
 }
 
-export default Loading
+export default ChatBox
