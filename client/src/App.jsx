@@ -47,7 +47,7 @@ const App = () => {
         )}
 
         {/* MAIN CONTENT */}
-        <div className="flex-1 h-dvh overflow-hidden">
+        <div className="flex-1 h-dvh overflow-y-auto">
           <Routes>
             <Route path="/" element={<ChatBox />} />
             <Route path="/credits" element={<Credits />} />
