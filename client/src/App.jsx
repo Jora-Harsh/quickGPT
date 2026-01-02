@@ -1,14 +1,19 @@
 import React, { useState } from 'react'
 import SideBar from './components/Sidebar'
 import ChatBox from './components/ChatBox'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import Credits from './pages/Credits'
 import Community from './pages/Community'
 import { assets } from './assets/assets'
 import './assets/prism.css'
+import Loading from './pages/Loading'
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const { pathname } = useLocation();
+
+  if (pathname === '/loading') return <Loading />;
+
 
   return (
     <div className="min-h-screen bg-white dark:bg-black dark:text-white">
